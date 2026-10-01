@@ -1,7 +1,9 @@
 {
-  "name":"eduplus-pro",
-  "version":"1.0.0",
-  "private":true,
-  "scripts":{"start":"node server/server.js"},
-  "dependencies":{"express":"latest"}
+  "name": "eduplus-vercel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EduPlus - plateforme \u00e9ducative pr\u00eate pour Vercel",
+  "engines": {
+    "node": "22.x"
+  }
 }

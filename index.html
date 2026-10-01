@@ -1,32 +1,28 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EduPlus Pro</title>
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EduPlus — Plateforme éducative</title>
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#182033}header{background:#fff;border-bottom:1px solid #ddd;padding:15px 5%;display:flex;gap:20px;align-items:center;position:sticky;top:0}.logo{font-size:24px;font-weight:800;color:#315efb}.sp{flex:1}.btn{padding:11px 15px;border:0;border-radius:9px;font-weight:bold;cursor:pointer}.p{background:#315efb;color:white}.s{background:#edf1ff;color:#3150bd}.hero{padding:60px 5%;background:linear-gradient(135deg,#edf2ff,#fff)}h1{font-size:42px;max-width:700px}.hero p{font-size:18px;color:#657085}.search{display:flex;max-width:760px;background:white;border:1px solid #ddd;padding:7px;border-radius:13px}.search input{flex:1;border:0;padding:12px;font-size:16px;outline:0}main{max-width:1150px;margin:35px auto;padding:0 20px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}.card{background:white;border:1px solid #e2e6ee;border-radius:15px;padding:20px}.tag{font-size:12px;background:#edf1ff;color:#3150bd;padding:5px 8px;border-radius:20px}.muted{color:#697386}.ai{background:#111827;color:#fff;border-radius:17px;padding:25px}.ai input{width:100%;padding:12px;border-radius:9px;border:0;margin:12px 0}.out{background:white;color:#172033;border-radius:9px;padding:15px;min-height:50px}.wa{position:fixed;right:20px;bottom:20px;background:#25d366;color:#fff;border-radius:50%;width:58px;height:58px;display:grid;place-items:center;text-decoration:none;font-weight:bold}
-</style></head><body>
-<header><div class="logo">EduPlus</div><span>Ressources</span><span>Assistant IA</span><span>Mon compte</span><div class="sp"></div><button class="btn s" onclick="login()">Connexion</button></header>
-<section class="hero"><h1>La bibliothèque scolaire intelligente.</h1><p>Cours, PDF, images, exercices et assistant IA réunis dans une seule plateforme.</p><div class="search"><input id="q" placeholder="Rechercher un cours, une matière, un chapitre..."><button class="btn p" onclick="search()">Rechercher</button></div></section>
-<main>
-<h2>Fonctions principales</h2><div class="grid">
-<div class="card"><h3>📚 Bibliothèque</h3><p class="muted">PDF, images, exercices et corrigés classés par niveau et matière.</p></div>
-<div class="card"><h3>🤖 IA pédagogique</h3><p class="muted">Explique un cours, répond aux questions et aide à comprendre les exercices.</p></div>
-<div class="card"><h3>👤 Comptes</h3><p class="muted">Élèves, enseignants et administrateurs avec droits différents.</p></div>
-<div class="card"><h3>🛡️ Administration</h3><p class="muted">Validation des documents, utilisateurs, catégories et statistiques.</p></div>
-</div>
-<h2>Ressources de départ</h2><div id="resources" class="grid"></div>
-<h2>Assistant IA</h2><div class="ai"><h3>Pose ta question</h3><input id="aiq" placeholder="Ex. Explique les dérivées de Terminale simplement"><button class="btn p" onclick="ask()">Demander à l'IA</button><div id="out" class="out">La connexion au backend IA est prête à être configurée.</div></div>
-<h2>Compte</h2><div class="card"><button class="btn p" onclick="login()">Créer mon compte / Se connecter</button></div>
-</main>
-<a class="wa" href="https://wa.me/22871730120?text=Bonjour%20EduPlus%2C%20je%20voudrais%20des%20informations." target="_blank">WA</a>
+body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#172033}header{background:linear-gradient(135deg,#1d4ed8,#7c3aed);color:#fff;padding:28px 18px}.wrap{max-width:1050px;margin:auto}.brand{font-size:30px;font-weight:800}.tag{margin-top:6px}nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}nav a{color:#fff;text-decoration:none;background:#ffffff22;padding:9px 13px;border-radius:10px}main{padding:24px 18px}.hero,.card{background:#fff;border-radius:18px;padding:22px;margin-bottom:18px;box-shadow:0 6px 24px #0000000b}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.btn{display:inline-block;border:0;border-radius:10px;padding:11px 15px;background:#2563eb;color:#fff;text-decoration:none;cursor:pointer}.secondary{background:#eef2ff;color:#1d4ed8}input,textarea{width:100%;padding:12px;border:1px solid #d0d5dd;border-radius:10px;margin:7px 0 12px;font:inherit}#answer{white-space:pre-wrap;background:#f8fafc;border-radius:12px;padding:14px;min-height:55px}.muted{color:#667085}footer{text-align:center;padding:30px;color:#667085}
+</style></head>
+<body>
+<header><div class="wrap"><div class="brand">📚 EduPlus</div><div class="tag">Cours, ressources, exercices et assistant pédagogique</div>
+<nav><a href="#cours">Cours</a><a href="#ressources">Ressources</a><a href="#ia">Assistant IA</a><a href="https://wa.me/22871730120?text=Bonjour%20EduPlus%2C%20j%27ai%20une%20question." target="_blank">WhatsApp</a></nav></div></header>
+<main class="wrap">
+<section class="hero"><h1>Bienvenue sur EduPlus</h1><p>Une base de travail pour les élèves : cours, exercices, corrigés et aide pédagogique.</p><a class="btn" href="#ia">Poser une question à l'IA</a></section>
+<section id="cours" class="card"><h2>📘 Matières</h2><div class="grid">
+<div><h3>Mathématiques</h3><p class="muted">Algèbre, analyse, probabilités, géométrie.</p></div>
+<div><h3>Physique-Chimie</h3><p class="muted">Mécanique, électricité, chimie et méthodes.</p></div>
+<div><h3>SVT</h3><p class="muted">Biologie, génétique, géologie et environnement.</p></div>
+<div><h3>Économie</h3><p class="muted">Macroéconomie, microéconomie et exercices.</p></div>
+</div></section>
+<section id="ressources" class="card"><h2>🔎 Ressources</h2><p>Complète cette section avec tes propres PDF, images et liens autorisés.</p><div class="grid">
+<a class="btn secondary" href="https://www.progres-school.com/" target="_blank">ProgresSchool</a>
+<a class="btn secondary" href="https://ecole.gouv.tg/" target="_blank">École.gouv.tg</a>
+<a class="btn secondary" href="https://www.lumni.fr/" target="_blank">Lumni</a></div></section>
+<section id="ia" class="card"><h2>🤖 Assistant pédagogique EduPlus</h2><p class="muted">Pose une question de cours. La clé API reste côté serveur.</p>
+<textarea id="question" rows="4" placeholder="Exemple : Explique-moi le multiplicateur budgétaire avec un exemple simple."></textarea>
+<button class="btn" onclick="ask()">Demander une explication</button><div id="answer" style="margin-top:14px">La réponse apparaîtra ici.</div></section>
+</main><footer>EduPlus · Projet éducatif</footer>
 <script>
-const data=[
-["Mathématiques — Terminale","Mathématiques","https://progresschool.fr/bibliotheque/terminale"],
-["Cours du lycée — Togo","Toutes matières","https://ecole.gouv.tg/lycee/course/index.php?categoryid=4&lang=fr"],
-["Cours Terminale — Faso e-Education","Toutes matières","https://fasoeducation.bf/espace-eleves/secondaire/secondaire-general/cours-terminale-generale.html"],
-["Lumni — lycée","Toutes matières","https://www.lumni.fr/"],
-["OER Commons — ressources libres","Toutes matières","https://oercommons.org/"],
-["Openverse — images réutilisables","Images","https://openverse.org/"]];
-function render(a=data){resources.innerHTML=a.map(x=>`<div class="card"><span class="tag">${x[1]}</span><h3>${x[0]}</h3><a class="btn p" href="${x[2]}" target="_blank">Ouvrir</a></div>`).join("")}
-function search(){let q=document.getElementById("q").value.toLowerCase();render(data.filter(x=>x.join(" ").toLowerCase().includes(q)))}
-async function ask(){let q=aiq.value.trim();if(!q)return;out.textContent="Analyse de ta question…";try{let r=await fetch("/api/ai",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question:q})});let j=await r.json();out.textContent=j.answer||j.error||"Réponse indisponible."}catch(e){out.textContent="Le serveur IA n'est pas encore démarré. Consulte README pour l'activer."}}
-function login(){alert("Le backend d'authentification est fourni dans le dossier server. Configure la base de données puis démarre le serveur.")}
-render();
+async function ask(){const q=document.getElementById('question').value.trim(),box=document.getElementById('answer');if(!q){box.textContent="Écris d'abord une question.";return}box.textContent="⏳ Réflexion en cours…";try{const r=await fetch('/api/ai',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q})});const d=await r.json();if(!r.ok)throw new Error(d.error||"Erreur");box.textContent=d.answer||"Réponse vide."}catch(e){box.textContent="Erreur : "+e.message}}
 </script></body></html>

@@ -1,23 +1,11 @@
-# EduPlus Pro
+# EduPlus — version Vercel
 
-Cette version ajoute un frontend et un backend.
+Structure prête pour Vercel :
+- `index.html` : interface EduPlus
+- `api/ai.js` : fonction serveur de l'assistant IA
+- `package.json` : configuration
+- `.env.example` : variables d'environnement
 
-## Lancer localement
-1. Installer Node.js.
-2. Dans ce dossier : `npm install`
-3. Copier `.env.example` vers `.env`.
-4. Ajouter ta clé API IA dans `.env`.
-5. `npm start`
-6. Ouvrir `http://localhost:3000`
+Après import dans Vercel, ajoute `OPENAI_API_KEY` dans les Environment Variables. Ne mets jamais ta vraie clé API dans GitHub.
 
-## Important
-Ne mets jamais la clé API dans `index.html` ou dans du JavaScript exécuté dans le navigateur.
-
-## WhatsApp
-Le bouton utilise déjà : +228 71 73 01 20.
-
-## Production
-Pour une vraie mise en ligne : base de données (Supabase/PostgreSQL), authentification, stockage sécurisé des PDF/images, antivirus/validation des uploads, rôles admin, sauvegardes et HTTPS.
-
-## Ressources
-Les liens de départ pointent vers des plateformes externes. Avant d'héberger/reproduire un fichier, vérifier sa licence et obtenir l'autorisation si nécessaire.
+Cette version de base ne comprend pas encore les comptes utilisateurs, la base de données, l'upload de PDF ni l'espace administrateur.
