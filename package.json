@@ -2,7 +2,8 @@
   "name": "eduplus-vercel",
   "version": "1.0.0",
   "private": true,
-  "description": "EduPlus - plateforme \u00e9ducative pr\u00eate pour Vercel",
+  "type": "module",
+  "description": "EduPlus - plateforme éducative prête pour Vercel",
   "engines": {
     "node": "22.x"
   }
